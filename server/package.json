@@ -13,7 +13,8 @@
   "dependencies": {
     "express": "^5.2.1",
     "mongodb": "^7.5.0",
-    "mongoose": "^9.0.2"
+    "mongoose": "^9.0.2",
+    "dotenv": "^16.1.4"
   },
   "devDependencies": {
     "@types/express": "^5.0.6",
