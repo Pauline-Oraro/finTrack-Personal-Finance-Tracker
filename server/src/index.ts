@@ -5,6 +5,7 @@ import authRoutes from "./routes/authRoutes";
 import profileRoutes from "./routes/profileRoutes";
 import analyticsRoutes from "./routes/analyticsRoutes";
 import connectDB from "./config/db";
+import { errorHandler } from "./middleware/errorHandler";
 
 dotenv.config();
 
@@ -27,6 +28,9 @@ app.use("/api/profile", profileRoutes);
 
 // Analytics routes
 app.use("/api/analytics", analyticsRoutes);
+
+// error handling middleware
+app.use(errorHandler);
 
 app.get("/", (req, res) => {
   res.send("FinTrack ~ An expense tracking application.");
