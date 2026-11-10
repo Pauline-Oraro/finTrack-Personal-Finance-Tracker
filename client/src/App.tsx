@@ -1,12 +1,17 @@
+import { createRouter, RouterProvider } from "@tanstack/react-router";
+import { routeTree } from "./routeTree.gen";
 
+const router = createRouter({
+  routeTree,
+  defaultPreload: "intent",
+});
 
-
-function App() {
-
-
-  return(
-    <div className='bg-red-500'>fintrack</div>
-  )
+declare module "@tanstack/react-router" {
+  interface Register {
+    router: typeof router;
+  }
 }
 
-export default App
+export default function App() {
+  return <RouterProvider router={router} />;
+}
