@@ -1,10 +1,11 @@
 
 
+import LoginForm from "../components/Auth/LoginForm";
+
 export default function LoginPage() {
   return (
-    <div>
-      <h1>Login</h1>
-      <p>This is the Login page.</p>
-    </div>
+    <main className="bg-slate-950 px-4 py-8 sm:px-8 sm:py-12">
+      <LoginForm />
+    </main>
   );
 }

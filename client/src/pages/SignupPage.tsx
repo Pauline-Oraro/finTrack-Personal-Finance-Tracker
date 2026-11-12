@@ -1,10 +1,10 @@
 
+import SignupForm from "../components/Auth/SignupForm";
 
 export default function SignupPage() {
   return (
-    <div>
-      <h1>Signup</h1>
-      <p>This is the Signup page.</p>
-    </div>
+    <main className="bg-slate-950 px-4 py-8 sm:px-8 sm:py-12">
+      <SignupForm />
+    </main>
   );
 }
